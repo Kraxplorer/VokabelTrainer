@@ -1,0 +1,154 @@
+/* Allgemeine Stile */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar {
+    background-color: #333;
+    height: 50px;
+}
+
+.navbar-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.navbar-item {
+    margin: 0 10px;
+}
+
+.navbar-item a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navbar-item a:hover {
+    background-color: #555;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.word-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.franzoesisch {
+    font-size: 36px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    margin-top: 40px;
+    color: #666;
+    text-align: center;
+    font-size: 36px;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.wrong {
+    color: #ff0000;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.edit-form {
+    margin-top: 20px;
+}
+
+.edit-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+.edit-form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.edit-table a {
+    color: #333;
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 3px;
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+.edit-table a:hover {
+    background-color: #ddd;
+}
+
+.edit-table th,
+.edit-table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.edit-table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+    text-align: left;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vokabeltrainer - Bearbeiten</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li class="navbar-item"><a href="/">Vokabeln Trainieren</a></li>
+                <li class="navbar-item"><a href="/edit">Vokabeln Hinzufügen/Entfernen</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Vokabeltrainer - Bearbeiten</h1>
+        <form class="edit-form" action="/save" method="POST">
+            <table class="edit-table">
+                <thead>
+                    <tr>
+                        <th>Französisch</th>
+                        <th>Deutsch</th>
+                        <th>Aktionen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for vokabel in vokabeln %}
+                    <tr>
+                        <td>
+                            <input type="text" name="franzoesisch[]" value="{{ vokabel.franzoesisch }}">
+                        </td>
+                        <td>
+                            <input type="text" name="deutsch[]" value="{{ vokabel.deutsch }}">
+                        </td>
+                        <td>
+                            <a href="/delete/{{ vokabel.id }}">Löschen</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <td>
+                            <input type="text" name="neu_franzoesisch" placeholder="Neues französisches Wort">
+                        </td>
+                        <td>
+                            <input type="text" name="neu_deutsch" placeholder="Übersetzung">
+                        </td>
+                        <td>
+                            <button type="submit">Speichern</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vokabeltrainer</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li class="navbar-item"><a href="/">Vokabeln Trainieren</a></li>
+                <li class="navbar-item"><a href="/edit">Vokabeln Hinzufügen/Entfernen</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Vokabeltrainer</h1>
+        {% if wrong %}
+        <p class="wrong">Falsch! Versuche es erneut.</p>
+        {% endif %}
+        <div class="word-container">
+            <h2 class="franzoesisch">{{ vokabel.franzoesisch }}</h2>
+        </div>
+        <form action="/check" method="POST">
+            <input type="hidden" name="vokabel_id" value="{{ vokabel.id }}">
+            <input type="hidden" name="vokabel_franzoesisch" value="{{ vokabel.franzoesisch }}">
+            <input type="text" id="eingabe" name="eingabe" autofocus>
+            <input type="submit" value="Überprüfen">
+        </form>
+    </div>
+</body>
+
+</html>
