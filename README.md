@@ -2,7 +2,7 @@
 
 ## Setup
 
-- Download the "vokabeltrainer.exe" and run the file.
+- Download the ["vokabeltrainer.exe"](https://github.com/Kraxplorer/VokabelTrainer/raw/main/vokabeltrainer.exe) and run the file.
 
 or
 
